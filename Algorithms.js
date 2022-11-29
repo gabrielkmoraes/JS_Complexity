@@ -1,3 +1,15 @@
+
+
+//Salva os dados no Arquivo
+function write_data(arquivo, dados){
+  const fs = require('fs')
+//'Resultados' .
+    fs.writeFile(arquivo, data, (err) => {
+        // Em Caso de erro, exibir erro.
+        if (err) throw err;
+    })
+}
+
 function merge(arr, l, m, r){
     var n1 = m - l + 1;
     var n2 = r - m;
@@ -64,5 +76,5 @@ function mergeSort(arr,l, r){
     mergeSort(arr,m+1,r);
     merge(arr,l,m,r);
 }
- 
- 
+
+
