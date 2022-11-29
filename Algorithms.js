@@ -101,7 +101,7 @@ function mergeSort(arr,l, r){
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
+// Gerando função random 
 let array = [];
 for (let i = 0 ; i < 10000 ; i++){
   array.push(getRandom(0,1000));
