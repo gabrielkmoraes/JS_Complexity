@@ -97,4 +97,31 @@ function mergeSort(arr,l, r){
     merge(arr,l,m,r);
 }
 
+// função InsertSort
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let array = [];
+for (let i = 0 ; i < 10000 ; i++){
+  array.push(getRandom(0,1000));
+}
+//Precisa arrumar a array_lenght
+function insertion_sort(A) {
+    var len = array_length(A);
+    var i = 1;
+    while (i < len) {
+        var x = A[i];
+        var j = i - 1;
+        while (j >= 0 && A[j] > x) {
+            A[j + 1] = A[j];
+            j = j - 1;
+        }
+        A[j + 1] = x;
+        i = i + 1;
+    }
+    return A;
+}
+
+console.log(insertion_sort(input));
 
