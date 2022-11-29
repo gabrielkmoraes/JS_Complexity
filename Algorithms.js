@@ -1,4 +1,24 @@
 
+function quickSort(arr, comeco, fim){
+  // Utilizando o valor do pivo como sendo o ultimo elemento da lista
+  const valorPivo = arr[fim];
+  let pivoIndex = comeco; 
+  for (let i = comeco; i < fim; i++) {
+      if (arr[i] < valorPivo) {
+      // Trocando os valores
+      [arr[i], arr[pivoIndex]] = [arr[pivotIndex], arr[i]];
+      pivotIndex++;
+      }
+  }
+  
+  // Colocando o valor do pivo no meio da array
+  //Para não percorrer novamente a parte da array ordenada
+  [arr[pivotIndex], arr[fim]] = [arr[fim], arr[pivotIndex]] 
+  return pivotIndex;
+};
+
+
+
 
 //Salva os dados no Arquivo
 function write_data(arquivo, dados){
